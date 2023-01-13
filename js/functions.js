@@ -22,8 +22,8 @@ function getMoveName(argMoveId) {
   }
 }
 function displayResult(argComputerMove, argPlayerMove) {
-  printMessage("Zagrałem " + argComputerMove + ", a Ty " + argPlayerMove);
-
+	printMessage("Komputer wybrał - " +argComputerMove);
+	printMessage("Gracz wybrał - "+ argPlayerMove);
   if (argComputerMove == "nieznany ruch" || argPlayerMove == "nieznany ruch") {
     printMessage("Zly ruch. Gra się skończyła, spróbuj ponownie");
   } else if (

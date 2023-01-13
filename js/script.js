@@ -1,4 +1,4 @@
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 let computerMove = getMoveName(randomNumber);
 let playerMove = getMoveName(prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce."));
-function displayResult(computerMove, playerMove);
+displayResult(computerMove, playerMove);
