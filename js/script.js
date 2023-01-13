@@ -31,5 +31,5 @@ if (playerMove > 3 || playerMove < 1) {
   (playerMove == 2 && randomNumber == 3) ||
   (playerMove == 3 && randomNumber == 1)
 ) {
-  printMessage("Player WIN!!!");
-} else printMessage("Competer WIN!!!");
+  printMessage("Computer WIN!!!");
+} else printMessage("Player WIN!!!");
