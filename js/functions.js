@@ -9,6 +9,18 @@ function clearMessages() {
   document.getElementById("messages").innerHTML = "";
 }
 
+  let numberOfGame = 0;
+function playGame(playerInput){
+  
+	let randomNumber = Math.floor(Math.random() * 3 + 1);
+	let computerMove = getMoveName(randomNumber);
+	let playerMove = getMoveName(playerInput);
+  clearMessages();
+  numberOfGame=numberOfGame+1;
+  printMessage('Game number : '+numberOfGame);
+	displayResult(computerMove, playerMove);
+  }
+
 function getMoveName(argMoveId) {
   if (argMoveId == 1) {
     return "kamień";
