@@ -9,20 +9,17 @@ function clearMessages() {
   document.getElementById("messages").innerHTML = "";
 }
 
-  let numberOfGame = 0;
-  let numCompWin=0;
-  let numPlayWin=0;
-  let numRemis=0;
+ 
 
 function playGame(playerInput){
   
-	let randomNumber = Math.floor(Math.random() * 3 + 1);
-	let computerMove = getMoveName(randomNumber);
-	let playerMove = getMoveName(playerInput);
+	// let randomNumber = Math.floor(Math.random() * 3 + 1);
+	// let computerMove = getMoveName(Math.floor(Math.random() * 3 + 1));
+	// let playerMove = getMoveName(playerInput);
   clearMessages();
   numberOfGame=numberOfGame+1;
   printMessage('Game number : '+numberOfGame);
-	displayResult(computerMove, playerMove);
+	displayResult(getMoveName(Math.floor(Math.random() * 3 + 1)),getMoveName(playerInput));
   }
 
 function getMoveName(argMoveId) {
@@ -37,6 +34,10 @@ function getMoveName(argMoveId) {
     return "nieznany ruch";
   }
 }
+let numberOfGame = 0;
+let numCompWin=0;
+let numPlayWin=0;
+let numRemis=0;
 function displayResult(argComputerMove, argPlayerMove) {
 	printMessage("Komputer wybrał - " +argComputerMove);
 	printMessage("Gracz wybrał - "+ argPlayerMove);
