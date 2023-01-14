@@ -10,6 +10,10 @@ function clearMessages() {
 }
 
   let numberOfGame = 0;
+  let numCompWin=0;
+  let numPlayWin=0;
+  let numRemis=0;
+
 function playGame(playerInput){
   
 	let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -44,11 +48,18 @@ function displayResult(argComputerMove, argPlayerMove) {
     argPlayerMove == argComputerMove
   ) {
     printMessage(" Remis !!!");
+    numRemis=numRemis+1;
+    printMessage('Computer won '+numCompWin+" times, player won "+numPlayWin+" times, remises "+numRemis);
   } else if (
     (argPlayerMove == "kamień" && argComputerMove == "papier") ||
     (argPlayerMove == "papier" && argComputerMove == "nożyce") ||
     (argPlayerMove == "nożyce" && argComputerMove == "kamień")
   ) {
     printMessage("Computer WIN!!!");
-  } else printMessage("Player WIN!!!");
-}
+    numCompWin=numCompWin+1;
+    printMessage('Computer won '+numCompWin+" times, player won "+numPlayWin+" times, remises "+numRemis);
+  } else {printMessage("Player WIN!!!");
+  numPlayWin=numPlayWin+1;
+  printMessage('Computer won '+numCompWin+" times, player won "+numPlayWin+" times, remises "+numRemis);
+}}
+

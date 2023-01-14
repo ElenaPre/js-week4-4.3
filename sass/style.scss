@@ -1,9 +1,42 @@
-.buttuns button {
-    display: inline-block;
+body{
+background: burlywood;
+width: 75%;
+margin: 10px auto;
+font-size: 20px;
+line-height: 1.7;
+font-family: 'Courier New', Courier, monospace;
+color: rgb(43, 24, 0);
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: auto;
+}
+.game-header {
+    text-align: center;
    
 }
 
-#play-rock {
+#buttons{
+    padding: 20px;
+    margin: 40px auto;
+    display: flex;	
+    justify-content: center;
+}
+
+#buttons button {
+    display: inline-block;
     padding: 10px;
-    margin: 20px;
+    margin: 40px ;
+    font-size: 27px;
+    background: rgb(221, 172, 109);
+    border: 2px solid rgb(43, 24, 0);
+    box-shadow: 5px 10px 10px rgb(43, 24, 0);
+    border-radius: 5px;
+    
 }
