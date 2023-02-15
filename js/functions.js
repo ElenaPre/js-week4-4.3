@@ -9,8 +9,7 @@ function clearMessages() {
 }
 
 function getComputerAction(){
- const result= Math.floor(Math.random() * 3 + 1);
- return result;
+ return Math.floor(Math.random() * 3 + 1);
 }
 
 function playGame(playerInput){
