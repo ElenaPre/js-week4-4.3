@@ -1,3 +1,48 @@
-body{background:#deb887;width:75%;margin:10px auto;font-size:20px;line-height:1.7;font-family:"Courier New",Courier,monospace;color:#2b1800}*,*::after,*::before{box-sizing:border-box}.container{max-width:1140px;padding:0 20px;margin:auto}.game-header{text-align:center}#buttons{padding:20px;margin:40px auto;display:flex;justify-content:center}#buttons button{display:inline-block;padding:10px;margin:40px;font-size:27px;background:#ddac6d;border:2px solid #2b1800;box-shadow:5px 10px 10px #2b1800;border-radius:5px}
+body {
+  background: burlywood;
+  width: 75%;
+  margin: 10px auto;
+  font-size: 20px;
+  line-height: 1.7;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(43, 24, 0);
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxLQUFLLGtCQUFrQixDQUFDLFNBQVMsQ0FBQyxnQkFBZ0IsQ0FBQyxjQUFjLENBQUMsZUFBZSxDQUFDLDJDQUEyQyxDQUFDLGFBQWEsQ0FBQyxxQkFBcUIscUJBQXFCLENBQUMsV0FBVyxnQkFBZ0IsQ0FBQyxjQUFjLENBQUMsV0FBVyxDQUFDLGFBQWEsaUJBQWlCLENBQUMsU0FBUyxZQUFZLENBQUMsZ0JBQWdCLENBQUMsWUFBWSxDQUFDLHNCQUFzQixDQUFDLGdCQUFnQixvQkFBb0IsQ0FBQyxZQUFZLENBQUMsV0FBVyxDQUFDLGNBQWMsQ0FBQyxrQkFBa0IsQ0FBQyx3QkFBd0IsQ0FBQyxnQ0FBZ0MsQ0FBQyxpQkFBaUIiLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keXtiYWNrZ3JvdW5kOiNkZWI4ODc7d2lkdGg6NzUlO21hcmdpbjoxMHB4IGF1dG87Zm9udC1zaXplOjIwcHg7bGluZS1oZWlnaHQ6MS43O2ZvbnQtZmFtaWx5OlwiQ291cmllciBOZXdcIixDb3VyaWVyLG1vbm9zcGFjZTtjb2xvcjojMmIxODAwfSosKjo6YWZ0ZXIsKjo6YmVmb3Jle2JveC1zaXppbmc6Ym9yZGVyLWJveH0uY29udGFpbmVye21heC13aWR0aDoxMTQwcHg7cGFkZGluZzowIDIwcHg7bWFyZ2luOmF1dG99LmdhbWUtaGVhZGVye3RleHQtYWxpZ246Y2VudGVyfSNidXR0b25ze3BhZGRpbmc6MjBweDttYXJnaW46NDBweCBhdXRvO2Rpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyfSNidXR0b25zIGJ1dHRvbntkaXNwbGF5OmlubGluZS1ibG9jaztwYWRkaW5nOjEwcHg7bWFyZ2luOjQwcHg7Zm9udC1zaXplOjI3cHg7YmFja2dyb3VuZDojZGRhYzZkO2JvcmRlcjoycHggc29saWQgIzJiMTgwMDtib3gtc2hhZG93OjVweCAxMHB4IDEwcHggIzJiMTgwMDtib3JkZXItcmFkaXVzOjVweH1cbiJdfQ== */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.game-header {
+  text-align: center;
+}
+
+#buttons {
+  padding: 20px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#buttons button {
+  display: inline-block;
+  padding: 10px;
+  margin: 40px;
+  font-size: 27px;
+  background: rgb(221, 172, 109);
+  border: 2px solid rgb(43, 24, 0);
+  box-shadow: 5px 10px 10px rgb(43, 24, 0);
+  border-radius: 5px;
+}
+
+#buttons button:hover {
+  opacity: 0.8;
+  transform: scale(0.9);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNBLHFCQUFBO0VBQ0EsVUFBQTtFQUNBLGlCQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0EsOENBQUE7RUFDQSxxQkFBQTtBQ0NBOztBREVBO0VBQ0ksc0JBQUE7QUNDSjs7QURFQTtFQUNJLGlCQUFBO0VBQ0EsZUFBQTtFQUNBLFlBQUE7QUNDSjs7QURFQTtFQUNJLGtCQUFBO0FDQ0o7O0FERUE7RUFDSSxhQUFBO0VBQ0EsaUJBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7QUNDSjs7QURFQTtFQUNJLHFCQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0VBQ0EsOEJBQUE7RUFDQSxnQ0FBQTtFQUNBLHdDQUFBO0VBQ0Esa0JBQUE7QUNDSjs7QURFQTtFQUNJLFlBQUE7RUFDQSxxQkFBQTtBQ0NKIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */

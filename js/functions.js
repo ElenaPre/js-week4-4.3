@@ -1,7 +1,6 @@
 function printMessage(msg) {
   let div = document.createElement("div");
   div.innerHTML = msg;
-
   document.getElementById("messages").appendChild(div);
 }
 
@@ -9,17 +8,16 @@ function clearMessages() {
   document.getElementById("messages").innerHTML = "";
 }
 
- 
+function getComputerAction(){
+ const result= Math.floor(Math.random() * 3 + 1);
+ return result;
+}
 
 function playGame(playerInput){
-  
-	// let randomNumber = Math.floor(Math.random() * 3 + 1);
-	// let computerMove = getMoveName(Math.floor(Math.random() * 3 + 1));
-	// let playerMove = getMoveName(playerInput);
   clearMessages();
-  numberOfGame=numberOfGame+1;
-  printMessage('Game number : '+numberOfGame);
-	displayResult(getMoveName(Math.floor(Math.random() * 3 + 1)),getMoveName(playerInput));
+  gameCount++;
+  printMessage('Game number : '+gameCount);
+	displayResult(getMoveName(getComputerAction()),getMoveName(playerInput));
   }
 
 function getMoveName(argMoveId) {
@@ -34,33 +32,32 @@ function getMoveName(argMoveId) {
     return "nieznany ruch";
   }
 }
-let numberOfGame = 0;
-let numCompWin=0;
-let numPlayWin=0;
-let numRemis=0;
+
+let gameCount = 0;
+let compWinCount=0;
+let playWinCount=0;
+let remisCount=0;
 function displayResult(argComputerMove, argPlayerMove) {
 	printMessage("Komputer wybrał - " +argComputerMove);
 	printMessage("Gracz wybrał - "+ argPlayerMove);
   if (argComputerMove == "nieznany ruch" || argPlayerMove == "nieznany ruch") {
     printMessage("Zly ruch. Gra się skończyła, spróbuj ponownie");
   } else if (
-    argPlayerMove == argComputerMove ||
-    argPlayerMove == argComputerMove ||
     argPlayerMove == argComputerMove
   ) {
     printMessage(" Remis !!!");
-    numRemis=numRemis+1;
-    printMessage('Computer won '+numCompWin+" times, player won "+numPlayWin+" times, remises "+numRemis);
+    remisCount++;
+    printMessage('Computer won '+compWinCount+" times, player won "+playWinCount+" times, remises "+remisCount);
   } else if (
     (argPlayerMove == "kamień" && argComputerMove == "papier") ||
     (argPlayerMove == "papier" && argComputerMove == "nożyce") ||
     (argPlayerMove == "nożyce" && argComputerMove == "kamień")
   ) {
     printMessage("Computer WIN!!!");
-    numCompWin=numCompWin+1;
-    printMessage('Computer won '+numCompWin+" times, player won "+numPlayWin+" times, remises "+numRemis);
+    compWinCount++;
+    printMessage('Computer won '+compWinCount+" times, player won "+playWinCount+" times, remises "+remisCount);
   } else {printMessage("Player WIN!!!");
-  numPlayWin=numPlayWin+1;
-  printMessage('Computer won '+numCompWin+" times, player won "+numPlayWin+" times, remises "+numRemis);
+  playWinCount++;
+  printMessage('Computer won '+compWinCount+" times, player won "+playWinCount+" times, remises "+remisCount);
 }}
 
