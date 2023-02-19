@@ -1,3 +1,8 @@
+let gameCount = 0;
+let compWinCount=0;
+let playWinCount=0;
+let remisCount=0;
+
 function printMessage(msg) {
   let div = document.createElement("div");
   div.innerHTML = msg;
@@ -21,26 +26,22 @@ function playGame(playerInput){
 
 function getMoveName(argMoveId) {
   if (argMoveId == 1) {
-    return "kamień";
+    return "stone";
   } else if (argMoveId == 2) {
-    return "papier";
+    return "paper";
   } else if (argMoveId == 3) {
-    return "nożyce";
+    return "scissors";
   } else {
-    printMessage("Nie znam ruchu o id " + argMoveId + ".");
-    return "nieznany ruch";
+    printMessage("I don't know the move id " + argMoveId + ".");
+    return "unknown move";
   }
 }
 
-let gameCount = 0;
-let compWinCount=0;
-let playWinCount=0;
-let remisCount=0;
 function displayResult(argComputerMove, argPlayerMove) {
-	printMessage("Komputer wybrał - " +argComputerMove);
-	printMessage("Gracz wybrał - "+ argPlayerMove);
+	printMessage("The computer chose - " +argComputerMove);
+	printMessage("The player chose - "+ argPlayerMove);
   if (argComputerMove == "nieznany ruch" || argPlayerMove == "nieznany ruch") {
-    printMessage("Zly ruch. Gra się skończyła, spróbuj ponownie");
+    printMessage("Wrong move. Game over, please try again");
   } else if (
     argPlayerMove == argComputerMove
   ) {
@@ -48,9 +49,9 @@ function displayResult(argComputerMove, argPlayerMove) {
     remisCount++;
     printMessage('Computer won '+compWinCount+" times, player won "+playWinCount+" times, remises "+remisCount);
   } else if (
-    (argPlayerMove == "kamień" && argComputerMove == "papier") ||
-    (argPlayerMove == "papier" && argComputerMove == "nożyce") ||
-    (argPlayerMove == "nożyce" && argComputerMove == "kamień")
+    (argPlayerMove == "stone" && argComputerMove == "paper") ||
+    (argPlayerMove == "paper" && argComputerMove == "scissors") ||
+    (argPlayerMove == "scissors" && argComputerMove == "stone")
   ) {
     printMessage("Computer WIN!!!");
     compWinCount++;
